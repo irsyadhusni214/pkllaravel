@@ -10,15 +10,17 @@ class Kelurahan extends Model
     protected $fillable = [
         'kode_kelurahan',
         'kelurahan',
-        'id_kecamatan',
+        'id_kecamatan'
     ];
+
+    protected $table = "kelurahans";
 
     public $timestamp = true;
 
     public function Rw(){
         return $this->hasMany('App\Rw', 'id_kelurahan');
     }
-    public function Kelurahan(){
-        return $this->belongsTo('App\Kecamatan', 'id_kecamatan');
+    public function Kecamatan(){
+        return $this->belongsTo('App\Models\Kecamatan', 'id_kecamatan');
     }
 }

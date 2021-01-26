@@ -61,13 +61,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="{{route('kelurahan.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kelurahan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="{{route('rw.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Rw</p>
                 </a>

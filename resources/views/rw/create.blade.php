@@ -5,17 +5,22 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Tambah Data Provinsi') }}</div>
+                <div class="card-header">{{ __('Tambah Data') }}</div>
 
                 <div class="card-body">
-                <form action="{{route('provinsi.store')}}" method="POST">
+                <form action="{{route('rw.store')}}" method="POST">
                 @csrf
                 <div class="mb-3">
-                    <label for="" class="form-label">Kode Provinsi</label>
-                    <input type="text" name="kode_provinsi" class="form-control" id="" aria-describedby="emailHelp" required>                </div>
+                    <label for="" class="form-label">Nama</label>
+                    <input type="text" name="nama" class="form-control" id="">
+                </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Provinsi</label>
-                    <input type="text" name="provinsi" class="form-control" id="" required>
+                    <select name="id_kelurahan" class="form-control" required>
+                    @foreach($kelurahan as $data)
+                    <option value="{{$data->id}}">{{$data->kelurahan}}</option>
+                    @endforeach
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

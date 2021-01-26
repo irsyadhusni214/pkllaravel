@@ -14,8 +14,8 @@ class Rw extends Model
 
     public $timestamp = true;
 
-    public function Rw(){
-        return $this->belongsTo('App\Kelurahan', 'id_kelurahan');
+    public function Kelurahan(){
+        return $this->belongsTo('App\Models\Kelurahan', 'id_kelurahan');
     }
     public function Kasus2(){
         return $this->hasMany('App\Kasus2', 'id_rw');

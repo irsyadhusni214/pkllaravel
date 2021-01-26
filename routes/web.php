@@ -34,6 +34,12 @@ Route::resource('kota', KotaController::class);
 use App\Http\Controllers\KecamatanController;
 Route::resource('kecamatan', KecamatanController::class);
 
+use App\Http\Controllers\KelurahanController;
+Route::resource('kelurahan', KelurahanController::class);
+
+use App\Http\Controllers\RwController;
+Route::resource('rw', RwController::class);
+
 // Route::get('provinsi', function(){
 //     return view('provinsi.index');
 // });

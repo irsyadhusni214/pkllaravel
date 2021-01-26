@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class KotaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $kota = Kota::all();

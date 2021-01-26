@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ProvinsiController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $provinsi = Provinsi::all();
@@ -20,6 +25,11 @@ class ProvinsiController extends Controller
 
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'kode_provinsi' => ['required'],
+            'provinsi' => ['required'],
+        ]);
+
         $provinsi = new Provinsi;
         $provinsi->kode_provinsi = $request->kode_provinsi;
         $provinsi->provinsi = $request->provinsi;
