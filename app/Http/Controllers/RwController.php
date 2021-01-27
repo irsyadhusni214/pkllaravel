@@ -27,7 +27,12 @@ class RwController extends Controller
 
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'nama' => ['required'],
+        ]);
+        
         $rw = new Rw;
+        $rw->rw = $request->rw;
         $rw->nama = $request->nama;
         $rw->id_kelurahan = $request->id_kelurahan;
         $rw->save();
@@ -51,6 +56,7 @@ class RwController extends Controller
     public function update(Request $request, $id)
     {
         $rw = Rw::findOrFail($id);
+        $rw->rw = $request->rw;
         $rw->nama = $request->nama;
         $rw->id_kelurahan = $request->id_kelurahan;
         $rw->save();

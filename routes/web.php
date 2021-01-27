@@ -40,6 +40,9 @@ Route::resource('kelurahan', KelurahanController::class);
 use App\Http\Controllers\RwController;
 Route::resource('rw', RwController::class);
 
+use App\Http\Controllers\Kasus2Controller;
+Route::resource('kasus2', Kasus2Controller::class);
+
 // Route::get('provinsi', function(){
 //     return view('provinsi.index');
 // });

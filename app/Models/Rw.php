@@ -9,8 +9,11 @@ class Rw extends Model
 {
     protected $fillable = [
         'id_kelurahan',
+        'rw',
         'nama',
     ];
+
+    protected $table = "rws";
 
     public $timestamp = true;
 
@@ -18,6 +21,6 @@ class Rw extends Model
         return $this->belongsTo('App\Models\Kelurahan', 'id_kelurahan');
     }
     public function Kasus2(){
-        return $this->hasMany('App\Kasus2', 'id_rw');
+        return $this->hasMany('App\Models\Kasus2', 'id_rw');
     }
 }

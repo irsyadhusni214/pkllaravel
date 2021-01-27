@@ -12,6 +12,10 @@
                 @csrf
                 @method('PUT')
                 <div class="mb-3">
+                    <label for="" class="form-label">Rw</label>
+                    <input type="text" name="kode_rw" value="{{$rw->kode_rw}}" class="form-control">
+                </div>
+                <div class="mb-3">
                     <label for="" class="form-label">Nama</label>
                     <input type="text" name="nama" value="{{$rw->nama}}" class="form-control">
                 </div>

@@ -7,6 +7,16 @@
             <div class="card">
                 <div class="card-header">{{ __('Tambah Data Kota') }}</div>
 
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="card-body">
                 <form action="{{route('kota.store')}}" method="POST">
                 @csrf
@@ -19,7 +29,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Provinsi</label>
-                    <select name="id_provinsi" class="form-control" required>
+                    <select name="id_provinsi" class="form-control">
                     @foreach($provinsi as $data)
                     <option value="{{$data->id}}">{{$data->provinsi}}</option>
                     @endforeach

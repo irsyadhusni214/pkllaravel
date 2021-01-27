@@ -7,15 +7,25 @@
             <div class="card">
                 <div class="card-header">{{ __('Tambah Data Kelurahan') }}</div>
 
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                 <div class="card-body">
                 <form action="{{route('kelurahan.store')}}" method="POST">
                 @csrf
                 <div class="mb-3">
                     <label for="" class="form-label">Kode Kelurahan</label>
-                    <input type="text" name="kode_kelurahan" class="form-control" id="" aria-describedby="emailHelp">                </div>
+                    <input type="text" name="kode_kelurahan" class="form-control" id="" aria-describedby="emailHelp" required>                </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Kelurahan</label>
-                    <input type="text" name="kelurahan" class="form-control" id="">
+                    <input type="text" name="kelurahan" class="form-control" id="" required>
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Kecamatan</label>

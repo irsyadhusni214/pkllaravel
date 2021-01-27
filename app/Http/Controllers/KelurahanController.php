@@ -27,6 +27,11 @@ class KelurahanController extends Controller
 
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'kode_kelurahan' => ['required'],
+            'kelurahan' => ['required'],
+        ]);
+        
         $kelurahan = new Kelurahan;
         $kelurahan->kode_kelurahan = $request->kode_kelurahan;
         $kelurahan->kelurahan = $request->kelurahan;
