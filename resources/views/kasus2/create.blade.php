@@ -6,38 +6,40 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Tambah Data Kasus') }}</div>
-
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
-                <div class="card-body">
-                <form action="{{route('kasus2.store')}}" method="POST">
-                @csrf
+                <div class="col">
+                    <livewire:dropdowns />
+                </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Rw</label>
-                    <select name="id_rw" class="form-control" required>
+                    <select name="id_rw" class="form-control">
                     @foreach($rw as $data)
                     <option value="{{$data->id}}">{{$data->rw}}</option>
                     @endforeach
                     </select>
+                    @if($errors->has('id_rw'))
+                    <span class="text-danger">{{ $errors->first('id_rw') }}</span>
+                    @endif 
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Positif</label>
-                    <input type="text" name="positif" class="form-control" id="" aria-describedby="emailHelp" required>                </div>
+                    <input type="text" name="positif" class="form-control" id="" aria-describedby="emailHelp"> 
+                    @if($errors->has('positif'))
+                    <span class="text-danger">{{ $errors->first('positif') }}</span>
+                    @endif 
+                </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Sembuh</label>
-                    <input type="text" name="sembuh" class="form-control" id="" required>
+                    <input type="text" name="sembuh" class="form-control" id="">
+                    @if($errors->has('sembuh'))
+                    <span class="text-danger">{{ $errors->first('sembuh') }}</span>
+                    @endif 
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Meninggal</label>
-                    <input type="text" name="meninggal" class="form-control" id="" required>
+                    <input type="text" name="meninggal" class="form-control" id="">
+                    @if($errors->has('meninggal'))
+                    <span class="text-danger">{{ $errors->first('meninggal') }}</span>
+                    @endif 
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

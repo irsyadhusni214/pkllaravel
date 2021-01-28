@@ -7,26 +7,22 @@
             <div class="card">
                 <div class="card-header">{{ __('Tambah Data') }}</div>
 
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
                 <div class="card-body">
                 <form action="{{route('rw.store')}}" method="POST">
                 @csrf
                 <div class="mb-3">
                     <label for="" class="form-label">Rw</label>
                     <input type="text" name="rw" class="form-control" id="">
+                    @if($errors->has('rw'))
+                    <span class="text-danger">{{ $errors->first('rw') }}</span>
+                    @endif 
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Nama</label>
                     <input type="text" name="nama" class="form-control" id="">
+                    @if($errors->has('nama'))
+                    <span class="text-danger">{{ $errors->first('nama') }}</span>
+                    @endif 
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Kelurahan</label>
@@ -35,6 +31,9 @@
                     <option value="{{$data->id}}">{{$data->kelurahan}}</option>
                     @endforeach
                     </select>
+                    @if($errors->has('id_kelurahan'))
+                    <span class="text-danger">{{ $errors->first('id_kelurahan') }}</span>
+                    @endif 
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>

@@ -7,25 +7,22 @@
             <div class="card">
                 <div class="card-header">{{ __('Tambah Data Kota') }}</div>
 
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
                 <div class="card-body">
                 <form action="{{route('kota.store')}}" method="POST">
                 @csrf
                 <div class="mb-3">
                     <label for="" class="form-label">Kode Kota</label>
-                    <input type="text" name="kode_kota" class="form-control" id="" aria-describedby="emailHelp">                </div>
+                    <input type="text" name="kode_kota" class="form-control" id="" aria-describedby="emailHelp"> 
+                    @if($errors->has('kode_kota'))
+                    <span class="text-danger">{{ $errors->first('kode_kota') }}</span>
+                    @endif 
+                </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Kota</label>
                     <input type="text" name="kota" class="form-control" id="">
+                    @if($errors->has('kota'))
+                    <span class="text-danger">{{ $errors->first('kota') }}</span>
+                    @endif 
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Provinsi</label>
@@ -34,6 +31,9 @@
                     <option value="{{$data->id}}">{{$data->provinsi}}</option>
                     @endforeach
                     </select>
+                    @if($errors->has('id_provinsi'))
+                    <span class="text-danger">{{ $errors->first('id_provinsi') }}</span>
+                    @endif 
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
