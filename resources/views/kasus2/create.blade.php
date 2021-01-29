@@ -6,19 +6,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Tambah Data Kasus') }}</div>
+                <div class="card-body">
+                <form action="{{route('kasus2.store')}}" method="POST">
+                @csrf
                 <div class="col">
                     <livewire:dropdowns />
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Rw</label>
-                    <select name="id_rw" class="form-control">
-                    @foreach($rw as $data)
-                    <option value="{{$data->id}}">{{$data->rw}}</option>
-                    @endforeach
-                    </select>
-                    @if($errors->has('id_rw'))
-                    <span class="text-danger">{{ $errors->first('id_rw') }}</span>
-                    @endif 
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Positif</label>

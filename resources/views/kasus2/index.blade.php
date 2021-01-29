@@ -25,7 +25,7 @@
                     <tbody>
                         <tr>
                         <th scope="row">{{$no++}}</th>
-                        <td>{{$data->rw}}</td>
+                        <td>{{$data->Rw->rw}}</td>
                         <td>{{$data->positif}}</td>
                         <td>{{$data->sembuh}}</td>
                         <td>{{$data->meninggal}}</td>

@@ -28,6 +28,7 @@ class RwController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'rw' => ['required'],
             'nama' => ['required'],
         ]);
         

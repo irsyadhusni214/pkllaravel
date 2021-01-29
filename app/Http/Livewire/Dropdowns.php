@@ -4,7 +4,7 @@ use App\Models\Provinsi;
 use App\Models\Kota;
 use App\Models\Kecamatan;
 use App\Models\Kelurahan;
-use App\Rw;
+use App\Models\Rw;
 use Livewire\Component;
 class Dropdowns extends Component
 {
@@ -39,9 +39,9 @@ class Dropdowns extends Component
                 $this->rw = Rw::where('id_kelurahan', $rw->id_kelurahan)->get();
                 $this->kelurahan = Kelurahan::where('id_kecamatan', $rw->kelurahan->id_kecamatan)->get();
                 $this->kecamatan = Kecamatan::where('id_kota', $rw->kecamatan->id_kota)->get();
-                $this->kota = Kota::where('kode_provinsi', $rw->kota->kode_provinsi)->get();
+                $this->kota = Kota::where('id_provinsi', $rw->kota->id_provinsi)->get();
 
-                $this->lprovinsi = $rw->kelurahan->kecamatan->kota->kode_provinsi;
+                $this->lprovinsi = $rw->kelurahan->kecamatan->kota->id_provinsi;
                 $this->lkota = $rw->kelurahan->kecamatan->id_kota;
                 $this->lkecamatan = $rw->kelurahan->id_kecamatan;
                 $this->lkelurahan = $rw->id_kelurahan;
@@ -57,7 +57,7 @@ class Dropdowns extends Component
 
     public function updatedlprovinsi($provinsi)
     {
-        $this->kota = Kota::where('kode_provinsi', $provinsi)->get();
+        $this->kota = Kota::where('id_provinsi', $provinsi)->get();
         $this->lkota = NULL;
         $this->lkecamatan = NULL;
         $this->lkelurahan = NULL;

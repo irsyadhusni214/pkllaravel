@@ -19,6 +19,6 @@ class Kasus2 extends Model
     public $timestamp = true;
 
     public function Rw(){
-        return $this->belongsTo('App\Models\Rw', 'id_kelurahan');
+        return $this->belongsTo('App\Models\Rw', 'id_rw');
     }
 }
