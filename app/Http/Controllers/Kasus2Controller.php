@@ -31,6 +31,7 @@ class kasus2Controller extends Controller
         $kasus2->positif = $request->positif;
         $kasus2->sembuh = $request->sembuh;
         $kasus2->meninggal = $request->meninggal;
+        $kasus2->tanggal = $request->tanggal;
         $kasus2->id_rw = $request->id_rw;
         $kasus2->save();
         return redirect()->route('kasus2.index')->with(['message'=>'Data Berhasil Dibuat']);
@@ -56,6 +57,7 @@ class kasus2Controller extends Controller
         $kasus2->positif = $request->positif;
         $kasus2->sembuh = $request->sembuh;
         $kasus2->meninggal = $request->meninggal;
+        $kasus2->tanggal = $request->tanggal;
         $kasus2->id_rw = $request->id_rw;
         $kasus2->save();
         return redirect()->route('kasus2.index')->with(['message'=>'Data Berhasil Di Ubah']);

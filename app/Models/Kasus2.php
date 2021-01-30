@@ -12,6 +12,7 @@ class Kasus2 extends Model
         'positif',
         'sembuh',
         'meninggal',
+        'tanggal',
     ];
 
     protected $table = "kasus2s";

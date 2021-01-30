@@ -1,7 +1,7 @@
 <div class="body">
     <div class="mb-3">
         <label for="" class="form-label">Provinsi</label>
-        <select name="kode_kota" wire:model="lprovinsi" class="form-control" id=""> 
+        <select name="kode_kota" wire:model="lprovinsi" class="form-control" <?=(!is_null($cek1))?'dissabled' : '';?> id=""> 
         <option value='' >-Provinsi-</option>
             @foreach($provinsi as $data)
                 <option value={{ $data->id }}>{{ $data->provinsi }}</option>

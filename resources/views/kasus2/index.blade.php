@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Data Kasus') }}
                 <a href="{{route('kasus2.create')}}" class="btn btn-primary float-right">Tambah Data</a>
@@ -13,10 +13,12 @@
                         <thead>
                         <tr>
                         <th scope="col">No</th>
+                        <th scope="col">Daerah</th>
                         <th scope="col">Rw</th>
                         <th scope="col">Positif</th>
                         <th scope="col">Sembuh</th>
                         <th scope="col">Meninggal</th>
+                        <th scope="col">Tanggal</th>
                         <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -25,10 +27,17 @@
                     <tbody>
                         <tr>
                         <th scope="row">{{$no++}}</th>
+                        <td>
+                        Provinsi: {{$data->Rw->kelurahan->kecamatan->kota->provinsi->provinsi}} <br>
+                        Kota: {{$data->Rw->kelurahan->kecamatan->kota->kota}} <br>
+                        Kecamatan: {{$data->Rw->kelurahan->kecamatan->kecamatan}} <br>
+                        Kelurahan: {{$data->Rw->kelurahan->kelurahan}} <br>
+                        </td>
                         <td>{{$data->Rw->rw}}</td>
                         <td>{{$data->positif}}</td>
                         <td>{{$data->sembuh}}</td>
                         <td>{{$data->meninggal}}</td>
+                        <td>{{$data->tanggal}}</td>
                         <td>                           
                             <form action="{{route('kasus2.destroy',$data->id)}}" method="post">
                             @csrf

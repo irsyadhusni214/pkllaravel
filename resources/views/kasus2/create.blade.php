@@ -33,6 +33,13 @@
                     <span class="text-danger">{{ $errors->first('meninggal') }}</span>
                     @endif 
                 </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Tanggal</label>
+                    <input type="date" name="tanggal" class="form-control" id="">
+                    @if($errors->has('tanggal'))
+                    <span class="text-danger">{{ $errors->first('tanggal') }}</span>
+                    @endif 
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 </form>

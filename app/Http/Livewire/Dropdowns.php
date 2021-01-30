@@ -15,6 +15,7 @@ class Dropdowns extends Component
     public $rw;
 
     public $idrw;
+    public $cek1;
 
     public $lprovinsi = NULL;
     public $lkota = NULL;
@@ -24,7 +25,7 @@ class Dropdowns extends Component
 
     public $selectedState = NULL;
 
-    public function mount($idrw = NULL)
+    public function mount($idrw = NULL, $cek = NULL)
     {
         $this->provinsi = Provinsi::all();
         $this->kota = collect();
@@ -46,6 +47,9 @@ class Dropdowns extends Component
                 $this->lkecamatan = $rw->kelurahan->id_kecamatan;
                 $this->lkelurahan = $rw->id_kelurahan;
                 $this->lrw = $rw->id_rw;
+                if ($cek == 1) {
+                    $this->cek1 = $cek;
+                }
             }
         }
     }

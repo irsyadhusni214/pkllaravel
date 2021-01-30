@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Data Kecamatan') }}
                 <a href="{{route('kecamatan.create')}}" class="btn btn-primary float-right">Tambah Data</a>
