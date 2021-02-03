@@ -7,8 +7,17 @@
             <div class="card">
                 <div class="card-header">{{ __('Tambah Data Kasus') }}</div>
                 <div class="card-body">
-                <form action="{{route('kasus2.edit', $kasus2->id)}}" method="POST">
+                <form action="{{route('kasus2.update', $kasus2->id)}}" method="POST">
                 @csrf
+                @method('PUT')
+                <div class="mb-3">
+                    <label for="" class="form-label">Rw</label>
+                    <select name="rw" class="form-control" required>
+                    @foreach($rw as $data)
+                    <option value="{{$data->id}}">{{$data->rw}}</option>
+                    @endforeach
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Positif</label>
                     <input type="text" name="positif" class="form-control" value="{{$kasus2->positif}}" id="" aria-describedby="emailHelp"> 
@@ -31,7 +40,7 @@
                     @endif 
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label">Meninggal</label>
+                    <label for="" class="form-label">Tanggal</label>
                     <input type="date" name="tanggal" value="{{$kasus2->tanggal}}" class="form-control" id="">
                     @if($errors->has('tanggal'))
                     <span class="text-danger">{{ $errors->first('tanggal') }}</span>

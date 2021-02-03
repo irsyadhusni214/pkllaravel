@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Kasus2;
+use App\Models\Provinsi;
 
 class ApiController extends Controller
 {
@@ -34,6 +35,30 @@ class ApiController extends Controller
         ];
         return response()->json($stat,200);
         
+    }
+
+    public function provinsi($id)
+    {
+        $show = DB::table('provinsis')
+            ->join('kotas','kotas.id_provinsi','=','provinsis.id')
+            ->join('kecamatans','kecamatans.id_kota','=','kotas.id')
+            ->join('kelurahans','kelurahans.id_kecamatan','=','kecamatans.id')
+            ->join('rws','rws.id_kelurahan','=','kelurahans.id')
+            ->join('kasus2s','kasus2s.id_rw','=','rws.id')
+            ->where('provinsis.id',$id)
+            ->select('provinsi',
+                    DB::raw('sum(kasus2s.positif) as positif'),
+                    DB::raw('sum(kasus2s.sembuh) as sembuh'),
+                    DB::raw('sum(kasus2s.meninggal) as meninggal'))
+            ->groupBy('provinsi')
+            ->get();
+
+        $stat = [
+            'success' =>true,
+            'Data Provinsi' => $show,
+            'message' => 'Data Ditampilkan'
+        ];
+        return response()->json($stat,200);
     }
 
     public function create()
