@@ -32,6 +32,69 @@ class ProvinsiController extends Controller
         return response()->json($stat,200);
     }
 
+    public function kota()
+    {
+        $show = DB::table('kotas')
+            ->join('kecamatans','kecamatans.id_kota','=','kotas.id')
+            ->join('kelurahans','kelurahans.id_kecamatan','=','kecamatans.id')
+            ->join('rws','rws.id_kelurahan','=','kelurahans.id')
+            ->join('kasus2s','kasus2s.id_rw','=','rws.id')
+            ->select('kota',
+                    DB::raw('sum(kasus2s.positif) as positif'),
+                    DB::raw('sum(kasus2s.sembuh) as sembuh'),
+                    DB::raw('sum(kasus2s.meninggal) as meninggal'))
+            ->groupBy('kota')
+            ->get();
+
+        $stat = [
+            'success' =>true,
+            'Data Kota' => $show,
+            'message' => 'Data Ditampilkan'
+        ];
+        return response()->json($stat,200);
+    }
+
+    public function kecamatan()
+    {
+        $show = DB::table('kecamatans')
+            ->join('kelurahans','kelurahans.id_kecamatan','=','kecamatans.id')
+            ->join('rws','rws.id_kelurahan','=','kelurahans.id')
+            ->join('kasus2s','kasus2s.id_rw','=','rws.id')
+            ->select('kecamatan',
+                    DB::raw('sum(kasus2s.positif) as positif'),
+                    DB::raw('sum(kasus2s.sembuh) as sembuh'),
+                    DB::raw('sum(kasus2s.meninggal) as meninggal'))
+            ->groupBy('kecamatan')
+            ->get();
+
+        $stat = [
+            'success' =>true,
+            'Data Kecamatan' => $show,
+            'message' => 'Data Ditampilkan'
+        ];
+        return response()->json($stat,200);
+    }
+    
+    public function kelurahan()
+    {
+        $show = DB::table('kelurahans')
+            ->join('rws','rws.id_kelurahan','=','kelurahans.id')
+            ->join('kasus2s','kasus2s.id_rw','=','rws.id')
+            ->select('kelurahan',
+                    DB::raw('sum(kasus2s.positif) as positif'),
+                    DB::raw('sum(kasus2s.sembuh) as sembuh'),
+                    DB::raw('sum(kasus2s.meninggal) as meninggal'))
+            ->groupBy('kelurahan')
+            ->get();
+
+        $stat = [
+            'success' =>true,
+            'Data Kelurahan' => $show,
+            'message' => 'Data Ditampilkan'
+        ];
+        return response()->json($stat,200);
+    }
+
 
 
     public function create()

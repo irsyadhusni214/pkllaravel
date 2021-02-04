@@ -22,6 +22,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('provinsi', [ProvinsiController::class, 'index']);
+Route::get('provinsi/kota', [ProvinsiController::class, 'kota']);
+Route::get('provinsi/kecamatan', [ProvinsiController::class, 'kecamatan']);
+Route::get('provinsi/kelurahan', [ProvinsiController::class, 'kelurahan']);
 Route::post('provinsi', [ProvinsiController::class, 'store']);
 Route::get('provinsi/{id}', [ProvinsiController::class, 'show']);
 Route::delete('provinsi/{id}', [ProvinsiController::class, 'destroy']);

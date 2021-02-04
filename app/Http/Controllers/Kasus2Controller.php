@@ -27,6 +27,13 @@ class kasus2Controller extends Controller
 
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'positif' => ['required'],
+            'sembuh' => ['required'],
+            'meninggal' => ['required'],
+            'tanggal' => ['required'],
+        ]);
+
         $kasus2 = new Kasus2;
         $kasus2->positif = $request->positif;
         $kasus2->sembuh = $request->sembuh;

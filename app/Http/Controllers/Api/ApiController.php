@@ -7,33 +7,34 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Kasus2;
 use App\Models\Provinsi;
+use Carbon\Carbon;
 
 class ApiController extends Controller
 {
     public function index()
     {
-        $positif = DB::table('rws')
-                ->select('kasus2s.positif','kasus2s.sembuh','kasus2s.meninggal')
-                ->join('kasus2s','rws.id','=','kasus2s.id_rw')
-                ->sum('kasus2s.positif');
-        $sembuh = DB::table('rws')
-                ->select('kasus2s.positif','kasus2s.sembuh','kasus2s.meninggal')
-                ->join('kasus2s','rws.id','=','kasus2s.id_rw')
-                ->sum('kasus2s.sembuh');
-        $meninggal = DB::table('rws')
-                ->select('kasus2s.positif','kasus2s.sembuh','kasus2s.meninggal')
-                ->join('kasus2s','rws.id','=','kasus2s.id_rw')
-                ->sum('kasus2s.meninggal');
-
-        $stat = [
-            'success' => true,
-            'data' =>'Data Kasus Indonesia',
-            'Jumlah Positif' => $positif,
-            'Jumlah Sembuh' => $sembuh,
-            'Jumlah Meninggal' => $meninggal,
-            'message' => 'Data Kasus Ditampilkan'
-        ];
-        return response()->json($stat,200);
+        $today = Carbon::now()->format('d-m-Y'); 
+    	$datasekarang = DB::table('kasus2s')
+                    ->select(DB::raw('SUM(positif) as Positif'), 
+                             DB::raw('SUM(sembuh) as Sembuh'), 
+                             DB::raw('SUM(meninggal) as Meninggal'),
+                             DB::raw('MAX(tanggal) as Tanggal'))
+	    			->whereDay('tanggal', '=' , $today)
+	    			->get();
+        $dt = DB::table('kasus2s')
+                    ->select(DB::raw('SUM(positif) as Positif'), 
+                             DB::raw('SUM(sembuh) as Sembuh'), 
+                             DB::raw('SUM(meninggal) as Meninggal'))
+    				->get();
+    	$res = [
+    		'success' => true,
+    		'data' => [
+            'hari_ini' => $datasekarang, 
+            'total' => $dt
+            ],
+    		'message' => 'Berhasil'
+    	];
+    	return response()->json($res, 200);
         
     }
 
