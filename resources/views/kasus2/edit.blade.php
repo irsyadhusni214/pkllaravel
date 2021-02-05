@@ -12,7 +12,7 @@
                 @method('PUT')
                 <div class="mb-3">
                     <label for="" class="form-label">Rw</label>
-                    <select name="rw" class="form-control" required>
+                    <select name="id_rw" class="form-control" required>
                     @foreach($rw as $data)
                     <option value="{{$data->id}}">{{$data->rw}}</option>
                     @endforeach

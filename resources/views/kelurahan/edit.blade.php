@@ -21,7 +21,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Kecamatan</label>
-                    <select name="id_kota" class="form-control" required>
+                    <select name="id_kecamatan" class="form-control" required>
                     @foreach($kecamatan as $data)
                     <option value="{{$data->id}}">{{$data->kecamatan}}</option>
                     @endforeach
