@@ -31,5 +31,6 @@ Route::delete('provinsi/{id}', [ProvinsiController::class, 'destroy']);
 
 
 Route::get('indonesia', [ApiController::class, 'index']);
+Route::get('global', [ApiController::class, 'global']);
 Route::get('provinsi2', [ApiController::class, 'provinsi']);
 Route::get('provinsi2/{id}', [ApiController::class, 'provinsi']);

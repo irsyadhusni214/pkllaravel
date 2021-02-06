@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -36,6 +37,32 @@ class ApiController extends Controller
     	];
     	return response()->json($res, 200);
         
+    }
+
+    public function global(){
+        $res = Http::get('https://api.kawalcorona.com/')->json();  
+        $stat = [];
+
+        foreach($res as $key => $isi)
+        {
+            $dtarray = $isi['attributes'];
+            $values = [
+                'OBJECTID' => $dtarray['OBJECTID'],
+                'Country_Region' => $dtarray['Country_Region'],
+                'Confirmed' => $dtarray['Confirmed'],
+                'Deaths' => $dtarray['Deaths'],
+                'Recovered' => $dtarray['Recovered'],
+            ];
+            array_push($stat, $values);
+        }
+
+        $data =[
+            'success' => true,
+            'data' => $stat,
+            'message' => 'Data Global'
+        ];
+
+        return response()->json($data, 200);   
     }
 
     public function provinsi($id)
