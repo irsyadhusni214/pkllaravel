@@ -46,7 +46,7 @@
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="{{asset('frontend/assets/img/logo/logo.png')}}" alt=""></a>
+                            <a href="index.html"><h1 style="color: white">Tracking Covid</h1></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
@@ -99,231 +99,12 @@
                                 <p>Keep at home, be safe</p>
                             </div>
                             <!--Hero form -->
-                            <form action="#" class="search-box mb-100">
-                                <div class="input-form">
-                                    <input type="text" placeholder="What are you finding?">
-                                </div>
-                                <div class="select-form">
-                                    <div class="select-itms">
-                                        <select name="select" id="select1">
-                                            <option value="">In where?</option>
-                                            <option value="">Catagories One</option>
-                                            <option value="">Catagories Two</option>
-                                            <option value="">Catagories Three</option>
-                                            <option value="">Catagories Four</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="search-form">
-                                    <a href="#"><i class="ti-search"></i> Search</a>
-                                </div>	
-                            </form>	
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--Hero Area End-->
-        <!--? Popular Locations Start 01-->
-        <div class="popular-location border-bottom section-padding40">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-80">
-                            <h2>Statistik</h2>
-                            <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location1.png')}}" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>New York</p>
-                                <a href="#" class="location-btn">65 <i class="ti-plus"></i> Listing</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location2.png')}}" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Paris</p>
-                                <a href="#" class="location-btn">60 <i class="ti-plus"></i> Listing</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location3.png')}}" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Rome</p>
-                                <a href="#" class="location-btn">50 <i class="ti-plus"></i> Listing</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location4.png')}}" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Italy</p>
-                                <a href="#" class="location-btn">28 <i class="ti-plus"></i> Location</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-location mb-30">
-                            <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location5.png')}}" alt="">
-                            </div>
-                            <div class="location-details">
-                                <p>Nepal</p>
-                                <a href="#" class="location-btn">99 <i class="ti-plus"></i> Listing</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Popular Locations End -->
-        <!--? Popular Directory Start -->
-        <div class="popular-directorya-area  border-bottom section-padding40 fix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-80">
-                            <h2>Popular Directory</h2>
-                            <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="directory-active">
-                    <!-- Single -->
-                    <div class="properties pb-20">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties1.png')}}" alt=""></a>
-                                <div class="img-text">
-                                    <span>$$$</span>
-                                    <span>Closed</span>
-                                </div>
-                                <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <h3><a href="#">Urban areas</a></h3>
-                                <p>Let's uncover the best places to eat, drink</p>
-                            </div>
-                            <div class="properties__footer d-flex justify-content-between align-items-center">
-                                <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
-                                    <h3>Food & Restaurant</h3>
-                                </div>
-                                <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single -->
-                    <div class="properties pb-20">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties2.png')}}" alt=""></a>
-                                <div class="img-text">
-                                    <span>$$$</span>
-                                    <span>Closed</span>
-                                </div>
-                                <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <h3><a href="#">Urban areas</a></h3>
-                                <p>Let's uncover the best places to eat, drink</p>
-                            </div>
-                            <div class="properties__footer d-flex justify-content-between align-items-center">
-                                <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
-                                    <h3>Food & Restaurant</h3>
-                                </div>
-                                <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single -->
-                    <div class="properties pb-20">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties3.png')}}" alt=""></a>
-                                <div class="img-text">
-                                    <span>$$$</span>
-                                    <span>Closed</span>
-                                </div>
-                                <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <h3><a href="#">Urban areas</a></h3>
-                                <p>Let's uncover the best places to eat, drink</p>
-                            </div>
-                            <div class="properties__footer d-flex justify-content-between align-items-center">
-                                <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
-                                    <h3>Food & Restaurant</h3>
-                                </div>
-                                <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single -->
-                    <div class="properties pb-20">
-                        <div class="properties__card">
-                            <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties3.png')}}" alt=""></a>
-                                <div class="img-text">
-                                    <span>$$$</span>
-                                    <span>Closed</span>
-                                </div>
-                                <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
-                                </div>
-                            </div>
-                            <div class="properties__caption">
-                                <h3><a href="#">Urban areas</a></h3>
-                                <p>Let's uncover the best places to eat, drink</p>
-                            </div>
-                            <div class="properties__footer d-flex justify-content-between align-items-center">
-                                <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
-                                    <h3>Food & Restaurant</h3>
-                                </div>
-                                <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--? Popular Directory End -->
         <!--? Want To work 01-->
         <section class="wantToWork-area">
@@ -332,12 +113,9 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-xl-7 col-lg-9 col-md-8">
                             <div class="wantToWork-caption wantToWork-caption2">
-                                <h2>How it works</h2>
+                                <h2>Indonesia</h2>
                                 <p>Let's uncover the best places to eat, drink, and shop nearest to you.</p>
                             </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-4">
-                            <a href="#" class="btn f-right sm-left">Explore Listing</a>
                         </div>
                     </div>
                 </div>
@@ -348,33 +126,33 @@
         <div class="our-services  border-bottom">
             <div class="container">
                 <div class="row">
-                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                    <div class=" col-lg-4 col-md-4 ">
                         <div class="single-services mb-30">
                             <div class="services-ion">
                                 <span>{{$positif}}</span>
                             </div>
                             <div class="services-cap">
-                                <h5><a href="#">Positif</a></h5>
+                                <h5>Positif</h5>
                             </div>
                         </div>
                     </div>
-                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                    <div class=" col-lg-4 col-md-4 ">
                         <div class="single-services mb-30">
                             <div class="services-ion">
-                                <span>02</span>
+                                <span>{{$sembuh}}</span>
                             </div>
                             <div class="services-cap">
-                                <h5><a href="#">Sembuh</a></h5>
+                                <h5>Sembuh</h5>
                             </div>
                         </div>
                     </div>
-                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                    <div class=" col-lg-4 col-md-4 ">
                         <div class="single-services mb-30">
                             <div class="services-ion">
-                                <span>03</span>
+                                <span>{{$meninggal}}</span>
                             </div>
                             <div class="services-cap">
-                                <h5><a href="#">Meninggal</a></h5>
+                                <h5>Meninggal</h5>
                             </div>
                         </div>
                     </div>

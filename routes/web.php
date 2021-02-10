@@ -28,6 +28,9 @@ Route::get('/admin', function(){
 use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi', ProvinsiController::class);
 
+use App\Http\Controllers\LaporController;
+Route::resource('index', LaporController::class);
+
 use App\Http\Controllers\KotaController;
 Route::resource('kota', KotaController::class);
 
