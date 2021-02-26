@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\DB;
+use carbon\carbon;
 use App\Models\Kasus2;
 use App\Models\Provinsi;
 
@@ -22,6 +24,11 @@ class LaporController extends Controller
                 ->join('kasus2s','rws.id','=','kasus2s.id_rw')
                 ->sum('kasus2s.meninggal');
         
+        $res = Http::get('https://api.kawalcorona.com/');
+        $global = $res->json();
+
+        $tanggal = Carbon::now()->format('D d-m-y');
+
         //provinsi
         $show = DB::table('provinsis')
         ->join('kotas','kotas.id_provinsi','=','provinsis.id')
@@ -36,6 +43,6 @@ class LaporController extends Controller
         ->groupBy('provinsi')
         ->get();
 
-        return view('frontend.index', compact('positif','sembuh','meninggal','show'));
+        return view('frontend.index', compact('positif','sembuh','meninggal','show','tanggal','global'));
     }
 }
