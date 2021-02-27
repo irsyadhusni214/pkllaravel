@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js')}}" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,24 +8,25 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/assets/img/favicon.ico')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/img/favicon.ico') }}">
 
-	<!-- CSS here -->
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/progressbar_barfiller.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/gijgo.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/assets/css/animated-headline.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/magnific-popup.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/fontawesome-all.min.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/themify-icons.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/slick.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/nice-select.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/progressbar_barfiller.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/gijgo.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/animated-headline.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
 </head>
+
 <body>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -32,7 +34,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="{{asset('frontend/assets/img/logo/loder.png')}}" alt="">
+                    <img src="{{ asset('frontend/assets/img/logo/loder.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -46,18 +48,19 @@
                     <div class="menu-wrapper d-flex align-items-center justify-content-between">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="{{asset('frontend/assets/img/logo/logo.png')}}" alt=""></a>
+                            <a href="index.html"><img src="{{ asset('frontend/assets/img/logo/logo.png') }}"
+                                    alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu f-right d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="listing.html">Catagories</a></li> 
+                                    <li><a href="listing.html">Catagories</a></li>
                                     <li><a href="#">Pages</a>
                                         <ul class="submenu">
                                             <li><a href="directory_details.html">listing Details</a></li>
-                                            <li><a href="listing.html">Catagories</a></li> 
+                                            <li><a href="listing.html">Catagories</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="blog.html">Blog</a>
@@ -70,7 +73,7 @@
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
-                        </div>          
+                        </div>
                         <!-- Header-btn -->
                         <div class="header-btns d-none d-lg-block f-right">
                             <a href="#" class="mr-40"><i class="ti-user"></i> Log in</a>
@@ -116,8 +119,8 @@
                                 </div>
                                 <div class="search-form">
                                     <a href="#"><i class="ti-search"></i> Search</a>
-                                </div>	
-                            </form>	
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -140,7 +143,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-location mb-30">
                             <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location1.png')}}" alt="">
+                                <img src="{{ asset('frontend/assets/img/gallery/location1.png') }}" alt="">
                             </div>
                             <div class="location-details">
                                 <p>New York</p>
@@ -151,7 +154,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="single-location mb-30">
                             <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location2.png')}}" alt="">
+                                <img src="{{ asset('frontend/assets/img/gallery/location2.png') }}" alt="">
                             </div>
                             <div class="location-details">
                                 <p>Paris</p>
@@ -162,7 +165,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-location mb-30">
                             <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location3.png')}}" alt="">
+                                <img src="{{ asset('frontend/assets/img/gallery/location3.png') }}" alt="">
                             </div>
                             <div class="location-details">
                                 <p>Rome</p>
@@ -173,7 +176,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-location mb-30">
                             <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location4.png')}}" alt="">
+                                <img src="{{ asset('frontend/assets/img/gallery/location4.png') }}" alt="">
                             </div>
                             <div class="location-details">
                                 <p>Italy</p>
@@ -184,7 +187,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="single-location mb-30">
                             <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/location5.png')}}" alt="">
+                                <img src="{{ asset('frontend/assets/img/gallery/location5.png') }}" alt="">
                             </div>
                             <div class="location-details">
                                 <p>Nepal</p>
@@ -213,13 +216,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties1.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/properties1.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -228,11 +232,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -241,13 +245,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties2.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/properties2.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -256,11 +261,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -269,13 +274,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties3.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/properties3.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -284,11 +290,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -297,13 +303,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties3.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/properties3.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -312,11 +319,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -351,7 +358,7 @@
                     <div class=" col-lg-4 col-md-6 col-sm-6">
                         <div class="single-services mb-30">
                             <div class="services-ion">
-                                <span>{{$positif}}</span>
+                                <span>{{ $positif }}</span>
                             </div>
                             <div class="services-cap">
                                 <h5><a href="#">Positif</a></h5>
@@ -399,13 +406,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/newDirectory1.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/newDirectory1.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -414,11 +422,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -427,13 +435,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/newDirectory2.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/newDirectory2.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -442,11 +451,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -455,13 +464,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/newDirectory3.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/newDirectory3.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -470,11 +480,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -483,13 +493,14 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="{{asset('frontend/assets/img/gallery/properties1.png')}}" alt=""></a>
+                                <a href="#"><img src="{{ asset('frontend/assets/img/gallery/properties1.png') }}"
+                                        alt=""></a>
                                 <div class="img-text">
                                     <span>$$$</span>
                                     <span>Closed</span>
                                 </div>
                                 <div class="icon">
-                                    <img src="{{asset('frontend/assets/img/gallery/categori_icon1.png')}}" alt=""> 
+                                    <img src="{{ asset('frontend/assets/img/gallery/categori_icon1.png') }}" alt="">
                                 </div>
                             </div>
                             <div class="properties__caption">
@@ -498,11 +509,11 @@
                             </div>
                             <div class="properties__footer d-flex justify-content-between align-items-center">
                                 <div class="restaurant-name">
-                                    <img src="{{asset('frontend/assets/img/gallery/restaurant-icon.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/restaurant-icon.png') }}" alt="">
                                     <h3>Food & Restaurant</h3>
                                 </div>
                                 <div class="heart">
-                                    <img src="{{asset('frontend/assets/img/gallery/heart1.png')}}" alt="">
+                                    <img src="{{ asset('frontend/assets/img/gallery/heart1.png') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -527,12 +538,12 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="single-location mb-30">
                             <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/home-blog1.png')}}" alt="">
+                                <img src="{{ asset('frontend/assets/img/gallery/home-blog1.png') }}" alt="">
                             </div>
                             <div class="location-details">
                                 <a href="#" class="location-btn">Tips</a>
                                 <ul>
-                                    <li>12 March   I   by Alan</li>
+                                    <li>12 March I by Alan</li>
                                 </ul>
                                 <p><a href="blog_details.html">The Best SPA Salons For Your Relaxation</a></p>
                             </div>
@@ -541,12 +552,12 @@
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="single-location mb-30">
                             <div class="location-img">
-                                <img src="{{asset('frontend/assets/img/gallery/home-blog2.png')}}" alt="">
+                                <img src="{{ asset('frontend/assets/img/gallery/home-blog2.png') }}" alt="">
                             </div>
                             <div class="location-details">
                                 <a href="#" class="location-btn">Tips</a>
                                 <ul>
-                                    <li>12 March   I   by Alan</li>
+                                    <li>12 March I by Alan</li>
                                 </ul>
                                 <p><a href="blog_details.html">The Best SPA Salons For Your Relaxation</a></p>
                             </div>
@@ -563,8 +574,10 @@
                     <div class="row justify-content-between">
                         <div class="col-xl-8 col-lg-8 col-md-7">
                             <div class="wantToWork-caption wantToWork-caption2">
-                                <img src="{{asset('frontend/assets/img/logo/logo2_footer.png')}}" alt="" class="mb-20">
-                                <p>Users and submit their own items. You can create different packages and by connecting with your
+                                <img src="{{ asset('frontend/assets/img/logo/logo2_footer.png') }}" alt=""
+                                    class="mb-20">
+                                <p>Users and submit their own items. You can create different packages and by connecting
+                                    with your
                                     PayPal or Stripe account charge users for registration to your directory portal.</p>
                             </div>
                         </div>
@@ -592,7 +605,7 @@
                                     <nav>
                                         <ul>
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="explore.html">Explore</a></li> 
+                                            <li><a href="explore.html">Explore</a></li>
                                             <li><a href="pages.html">Pages</a></li>
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -619,9 +632,16 @@
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-10 col-lg-9 ">
                                 <div class="footer-copy-right">
-                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                    <p>
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        Copyright &copy;<script>
+                                            document.write(new Date().getFullYear());
+
+                                        </script> All rights reserved | This template is made with <i
+                                            class="fa fa-heart" aria-hidden="true"></i> by <a
+                                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -632,54 +652,55 @@
     </footer>
 
     <!-- Scroll Up -->
-    <div id="back-top" >
+    <div id="back-top">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
     <!-- JS here -->
 
-    <script src="{{asset('frontend/assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="{{asset('frontend/assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/popper.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
     <!-- Jquery Mobile Menu -->
-    <script src="{{asset('frontend/assets/js/jquery.slicknav.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.slicknav.min.js') }}"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/slick.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/slick.min.js') }}"></script>
     <!-- One Page, Animated-HeadLin -->
-    <script src="{{asset('frontend/assets/js/wow.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/animated.headline.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/animated.headline.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.js') }}"></script>
 
     <!-- Date Picker -->
-    <script src="{{asset('frontend/assets/js/gijgo.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/gijgo.min.js') }}"></script>
     <!-- Nice-select, sticky -->
-    <script src="{{asset('frontend/assets/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.sticky.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.sticky.js') }}"></script>
     <!-- Progress -->
-    <script src="{{asset('frontend/assets/js/jquery.barfiller.js')}}"></script>
-    
+    <script src="{{ asset('frontend/assets/js/jquery.barfiller.js') }}"></script>
+
     <!-- counter , waypoint,Hover Direction -->
-    <script src="{{asset('frontend/assets/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/waypoints.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.countdown.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/hover-direction-snake.min.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/hover-direction-snake.min.js') }}"></script>
 
     <!-- contact js -->
-    <script src="{{asset('frontend/assets/js/contact.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.form.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/mail-script.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/jquery.ajaxchimp.min.js')}}"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
-    <script src="{{asset('frontend/assets/js/plugins.js')}}"></script>
-    <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+    <script src="{{ asset('frontend/assets/js/contact.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.form.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/mail-script.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="{{ asset('frontend/assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
 
 
-    
-    </body>
+
+</body>
+
 </html>
