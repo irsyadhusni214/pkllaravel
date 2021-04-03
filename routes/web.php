@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
 
 Auth::routes();
 
@@ -29,7 +29,10 @@ use App\Http\Controllers\ProvinsiController;
 Route::resource('provinsi', ProvinsiController::class);
 
 use App\Http\Controllers\LaporController;
-Route::resource('index', LaporController::class);
+Route::resource('/', LaporController::class);
+
+use App\Http\Controllers\UtamaController;
+Route::resource('admin', UtamaController::class);
 
 use App\Http\Controllers\KotaController;
 Route::resource('kota', KotaController::class);
@@ -45,6 +48,11 @@ Route::resource('rw', RwController::class);
 
 use App\Http\Controllers\Kasus2Controller;
 Route::resource('kasus2', Kasus2Controller::class);
+
+//report
+use App\Http\Controllers\ReportController;
+Route::get('laporan', [ReportController::class, 'getReportProvinsi']);
+Route::post('laporan', [ReportController::class, 'ReportProvinsi']);
 
 // Route::get('provinsi', function(){
 //     return view('provinsi.index');

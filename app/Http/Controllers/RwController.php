@@ -8,10 +8,7 @@ use Illuminate\Http\Request;
 
 class RwController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
     
     public function index()
     {
@@ -29,12 +26,11 @@ class RwController extends Controller
     {
         $validatedData = $request->validate([
             'rw' => ['required'],
-            'nama' => ['required'],
+            'id_kelurahan' => ['required'],
         ]);
         
         $rw = new Rw;
         $rw->rw = $request->rw;
-        $rw->nama = $request->nama;
         $rw->id_kelurahan = $request->id_kelurahan;
         $rw->save();
         return redirect()->route('rw.index')->with(['message'=>'Data Berhasil Dibuat']);
@@ -58,7 +54,6 @@ class RwController extends Controller
     {
         $rw = Rw::findOrFail($id);
         $rw->rw = $request->rw;
-        $rw->nama = $request->nama;
         $rw->id_kelurahan = $request->id_kelurahan;
         $rw->save();
         return redirect()->route('rw.index')->with(['message'=>'Data Berhasil Di Ubah']);

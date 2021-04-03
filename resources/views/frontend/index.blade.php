@@ -55,6 +55,8 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#portfolio">Data Local</a></li>
+                    <li><a href="#global">Data Global</a></li>
                     <li><a href="#team">Tentang</a></li>
                     <li><a href="#contact">Kontak</a></li>
 
@@ -83,14 +85,10 @@
                         <div class="content">
                             <h3>Covid - 19</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
-                                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus
-                                optio ad corporis.
+                                Corona virus atau COVID - 19 adalah sebuah virus yang berbahaya, yang
+                                menyerang ke seluruh dunia. Oleh karena itu,
+                                tetap patuhi protokol kesahatan yang ada demi keselamatan bersama.
                             </p>
-                            <div class="text-center">
-                                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                            </div>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-7 d-flex">
@@ -127,10 +125,6 @@
 
             </div>
         </section><!-- End Why Us Section -->
-        <div class="section-title">
-            <h2 data-aos="fade-up">Update Terakhir : {{ $tanggal }}</h2>
-        </div>
-
         <!-- ======= Values Section ======= -->
         <section id="portfolio" class="portfolio">
             <div class="container">
@@ -167,11 +161,7 @@
         </section>
         <!-- End Values Section -->
 
-        <!-- ======= Testimonials Section ======= -->
-        <!-- End Testimonials Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <section id="global" class="">
             <div class="container">
 
                 <div class="section-title">
@@ -192,21 +182,24 @@
                         @foreach ($global as $data)
                             <tbody>
                                 <tr>
-                                    <th scope="row">{{ $no++ }}</th>
-                                    <td>{{ $data['attributes']['Country_Region'] }}</td>
-                                    <td>{{ $data['attributes']['Confirmed'] }}</td>
-                                    <td>{{ $data['attributes']['Recovered'] }}</td>
-                                    <td>{{ $data['attributes']['Deaths'] }}</td>
+                                    <td> <?php echo $no++; ?></td>
+                                    <td> <?php echo $data['attributes']['Country_Region']; ?></td>
+                                    <td> <?php echo number_format($data['attributes']['Confirmed']); ?></td>
+                                    <td><?php echo number_format($data['attributes']['Recovered']); ?></td>
+                                    <td><?php echo number_format($data['attributes']['Deaths']); ?></td>
                                 </tr>
                         @endforeach
                         </tbody>
                     </table>
                 </div>
-
             </div>
+        </section>
 
-            </div>
-        </section><!-- End Portfolio Section -->
+        <!-- ======= Testimonials Section ======= -->
+        <!-- End Testimonials Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <!-- End Portfolio Section -->
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
@@ -214,9 +207,10 @@
 
                 <div class="section-title">
                     <h2 data-aos="fade-up">Tentang</h2>
-                    <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid
-                        fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui
-                        impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p data-aos="fade-up">Covid - 19 ini adalah wabah yang sengat berbahaya, yang dapat menimbulkan
+                        korban jiwa. Maka dari itu,
+                        patuhi protokol yang ada dan jaga diri baik baik.
+                    </p>
                 </div>
 
                 <div class="row">
@@ -278,9 +272,8 @@
 
                 <div class="section-title">
                     <h2 data-aos="fade-up">Kontak</h2>
-                    <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid
-                        fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui
-                        impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p data-aos="fade-up">Jika anda merasa kurang sehat atau ingin melakukan konsultasi bisa hubungi
+                        kami dibawah ini</p>
                 </div>
 
                 <div class="row justify-content-center">
@@ -314,15 +307,13 @@
                         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars" />
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nama"
+                                        data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" data-rule="email"
-                                        data-msg="Please enter a valid email" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                                        data-rule="email" data-msg="Please enter a valid email" />
                                     <div class="validate"></div>
                                 </div>
                             </div>
@@ -334,7 +325,7 @@
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" name="message" rows="5" data-rule="required"
-                                    data-msg="Please write something for us" placeholder="Message"></textarea>
+                                    data-msg="Please write something for us" placeholder="Pesan"></textarea>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
@@ -342,7 +333,7 @@
                                 <div class="error-message"></div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
+                            <div class="text-center"><button type="submit">Kirim Pesan</button></div>
                         </form>
                     </div>
 
@@ -361,13 +352,13 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>Flexor</h3>
+                        <h3>Tracking Covid - 19</h3>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            Taman Cibaduyut Indah <br>
+                            Bandung<br>
+                            Indonesia <br><br>
+                            <strong>Telphone:</strong> 089342758392<br>
+                            <strong>Email:</strong> tracking@gmail.com<br>
                         </p>
                     </div>
 

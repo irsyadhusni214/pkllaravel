@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Data Provinsi') }}</div>
+                <div class="card-header">{{ __('Edit Provinsi') }}</div>
 
                 <div class="card-body">
                 <form action="{{route('provinsi.update', $provinsi->id)}}" method="POST">

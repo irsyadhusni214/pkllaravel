@@ -10,7 +10,6 @@ class Rw extends Model
     protected $fillable = [
         'id_kelurahan',
         'rw',
-        'nama',
     ];
 
     protected $table = "rws";

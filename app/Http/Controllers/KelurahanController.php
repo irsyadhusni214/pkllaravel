@@ -7,12 +7,12 @@ use App\Http\Controllers\DB;
 use Illuminate\Http\Request;
 
 class KelurahanController extends Controller
-{
-    public function __construct()
+{   
+     public function __construct()
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
         $kelurahan = Kelurahan::all();
@@ -28,12 +28,10 @@ class KelurahanController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'kode_kelurahan' => ['required'],
             'kelurahan' => ['required'],
         ]);
         
         $kelurahan = new Kelurahan;
-        $kelurahan->kode_kelurahan = $request->kode_kelurahan;
         $kelurahan->kelurahan = $request->kelurahan;
         $kelurahan->id_kecamatan = $request->id_kecamatan;
         $kelurahan->save();
@@ -57,7 +55,6 @@ class KelurahanController extends Controller
     public function update(Request $request, $id)
     {
         $kelurahan = Kelurahan::findOrFail($id);
-        $kelurahan->kode_kelurahan = $request->kode_kelurahan;
         $kelurahan->kelurahan = $request->kelurahan;
         $kelurahan->id_kecamatan = $request->id_kecamatan;
         $kelurahan->save();

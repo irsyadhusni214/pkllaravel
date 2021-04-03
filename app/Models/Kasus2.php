@@ -15,7 +15,7 @@ class Kasus2 extends Model
         'tanggal',
     ];
 
-    protected $table = "kasus2s";
+    protected $table = "Kasus2s";
 
     public $timestamp = true;
 

@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 
 class KecamatanController extends Controller
 {
-    public function __construct()
+     public function __construct()
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
         $kecamatan = Kecamatan::all();
@@ -28,12 +28,10 @@ class KecamatanController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'kode_kecamatan' => ['required'],
             'kecamatan' => ['required'],
         ]);
 
         $kecamatan = new Kecamatan;
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->kecamatan = $request->kecamatan;
         $kecamatan->id_kota = $request->id_kota;
         $kecamatan->save();
@@ -57,7 +55,6 @@ class KecamatanController extends Controller
     public function update(Request $request, $id)
     {
         $kecamatan = Kecamatan::findOrFail($id);
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->kecamatan = $request->kecamatan;
         $kecamatan->id_kota = $request->id_kota;
         $kecamatan->save();

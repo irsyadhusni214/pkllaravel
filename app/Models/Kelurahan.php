@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Kelurahan extends Model
 {
     protected $fillable = [
-        'kode_kelurahan',
         'kelurahan',
         'id_kecamatan'
     ];
